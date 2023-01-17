@@ -22,7 +22,7 @@ Content-Type: application/json
 
 { "color": "BLACK", "size": "M", "cotton": 80, "quantity": 20 }
 
-###  "Приход носков на склад".
+###  "Списание брака носков со склада".
 DELETE http://localhost:8080/api/socks/
 Content-Type: application/json
 

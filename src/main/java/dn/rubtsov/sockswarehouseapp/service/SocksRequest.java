@@ -25,9 +25,7 @@ public class SocksRequest {  // DATA TRANSFER OBJECT
         this.size = size;
     }
 
-    public int getCotton() {
-        return cotton;
-    }
+    public int getCotton() { return cotton; }
 
     public void setCotton(int cotton) {
         this.cotton = cotton;

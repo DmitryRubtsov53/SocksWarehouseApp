@@ -1,7 +1,5 @@
 package dn.rubtsov.sockswarehouseapp.model;
 
-
-
 import java.util.Objects;
 
 public class Socks {

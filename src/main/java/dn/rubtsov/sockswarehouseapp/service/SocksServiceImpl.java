@@ -32,7 +32,6 @@ private final HashMap<Socks, Integer> socksMap = new HashMap<>();
             socksMap.put(socks, socksQuantity - socksRequest.getQuantity());
         } else throw new NotEnoughQuantityException("На складе недостаточно носков.");
     }
-
     @Override
     public int quantitySocks(Color color, Size size, Integer cottonMin, Integer cottonMax) {
       int total = 0;
@@ -82,5 +81,4 @@ private final HashMap<Socks, Integer> socksMap = new HashMap<>();
               socksRequest.getSize(),
               socksRequest.getCotton());
   }
-
 } // Class

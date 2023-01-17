@@ -11,7 +11,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.*;
 
-
 @RestController
 @RequestMapping("/api/socks")
 @Tag(name = "СКЛАД НОСКОВ", description = "Количественный учет операций с носками на складе.")

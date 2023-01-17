@@ -16,5 +16,4 @@ public interface SocksService {
     void validateRequest(SocksRequest socksRequest);
 
     Socks mapToSocks(SocksRequest socksRequest);
-
 }
