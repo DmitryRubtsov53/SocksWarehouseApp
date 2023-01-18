@@ -2,28 +2,28 @@
 POST http://localhost:8080/api/socks/
 Content-Type: application/json
 
-{ "color": "WHITE", "size": "S", "cotton": 100, "quantity": 30 }
+{ "color": "белый", "size": "23", "cotton": 100, "quantity": 30 }
 
 ###  "Приход носков на склад".
 POST http://localhost:8080/api/socks/
 Content-Type: application/json
 
-{ "color": "RED", "size": "XL", "cotton": 50, "quantity": 20 }
+{ "color": "красный", "size": "31", "cotton": 50, "quantity": 20 }
 
 ###  "Приход носков на склад".
 POST http://localhost:8080/api/socks/
 Content-Type: application/json
 
-{ "color": "BLACK", "size": "M", "cotton": 80, "quantity": 50 }
+{ "color": "чёрный", "size": "25", "cotton": 80, "quantity": 50 }
 
 ### Отгрузка носков со склада.
 PUT http://localhost:8080/api/socks/
 Content-Type: application/json
 
-{ "color": "BLACK", "size": "M", "cotton": 80, "quantity": 20 }
+{ "color": "чёрный", "size": "25", "cotton": 80, "quantity": 20 }
 
 ###  "Списание брака носков со склада".
 DELETE http://localhost:8080/api/socks/
 Content-Type: application/json
 
-{ "color": "WHITE", "size": "S", "cotton": 100, "quantity": 30 }
+{ "color": "белый", "size": "23", "cotton": 100, "quantity": 30 }

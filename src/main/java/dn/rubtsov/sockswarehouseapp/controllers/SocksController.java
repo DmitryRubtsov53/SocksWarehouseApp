@@ -22,7 +22,7 @@ public class SocksController {
         this.socksService = socksService;
     }
 
-    @PostMapping("/")
+    @PostMapping
     @Operation( summary = "Регистрация прихода товара на склад."    )
     @ApiResponses ( {
             @ApiResponse ( responseCode = "200",
@@ -37,7 +37,7 @@ public class SocksController {
         socksService.addSocks(socksRequest);
     }
 //----------------------------------------------------------------------------------------------------
-    @PutMapping("/")
+    @PutMapping
     @Operation( summary = "Регистрация отпуска носков со склада."    )
     @ApiResponses ( {
             @ApiResponse ( responseCode = "200",
@@ -53,7 +53,7 @@ public class SocksController {
         socksService.releaseSocks(socksRequest);
     }
 //----------------------------------------------------------------------------------------------------
-    @GetMapping("/")
+    @GetMapping
     @Operation( summary = "Возвращает общее количество носков на складе, соответствующих параметрам запроса."    )
     @ApiResponses ( {
             @ApiResponse ( responseCode = "200",
@@ -71,7 +71,7 @@ public class SocksController {
         return socksService.quantitySocks(color, size, cottonMin, cottonMax);
     }
 //----------------------------------------------------------------------------------------------------
-    @DeleteMapping("/")
+    @DeleteMapping
     @Operation( summary = "Списание брака носков со склада."    )
     @ApiResponses ( {
             @ApiResponse ( responseCode = "200",
