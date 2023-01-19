@@ -3,6 +3,7 @@ package dn.rubtsov.sockswarehouseapp.model;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonValue;
+import dn.rubtsov.sockswarehouseapp.exception.IncorrectDataExceptiom;
 
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum Color {
@@ -18,17 +19,13 @@ public enum Color {
     public String getText() {
         return text;
     }
-    @JsonCreator    //  Проблема где-то здесь???
-    public static Color forValues(String color) {
-        try {
-            for (Color el : Color.values()) {
-                if (color.equals(el.text)) {
-                    return el;
+    @JsonCreator
+    public static Color convertColor(String source) {
+        for (Color color : Color.values()) {
+                if (source.equals(color.text)) {
+                    return color;
                 }
             }
-        }catch (Exception e){
-            throw new RuntimeException();
-        }
-        throw new RuntimeException();
+        throw new IncorrectDataExceptiom("Такого цвета нет в ассортименте склада.");
     }
 }

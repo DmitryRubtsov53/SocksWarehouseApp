@@ -3,34 +3,32 @@ package dn.rubtsov.sockswarehouseapp.model;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonValue;
+import dn.rubtsov.sockswarehouseapp.exception.IncorrectDataExceptiom;
 
 
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum Size {
 
-    S("23"), M("27"), L("27"), XL("29"), XXl("31");
+// Обозначения по европейскому (S-XXL) и российскому (23-31) стандартам обозначения размера носков:
+    S("23"), M("25"), L("27"), XL("29"), XXl("31");
 
-    private final String number;
+    private final String ruSize;
 
-    Size(String number) {
-        this.number = number;
+    Size(String ruSize) {
+        this.ruSize = ruSize;
     }
 
     @JsonValue
     public String getNumber() {
-        return number;
+        return ruSize;
     }
-    @JsonCreator    // Проблема где-то здесь???
-    public static Size forValues(String size) {
-        try {
-            for (Size el : Size.values()) {
-                if (size.equals(el.number)) {
-                    return el;
+    @JsonCreator
+    public static Size convertSize(String source) {
+           for (Size size : Size.values()) {
+                if (source.equals(size.ruSize)) {
+                    return size;
                 }
             }
-        }catch (Exception e) {
-            throw new RuntimeException();
-        }
-        throw new RuntimeException();
+        throw new IncorrectDataExceptiom("Такой размер не существует.");
     }
 }

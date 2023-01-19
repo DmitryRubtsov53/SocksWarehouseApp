@@ -14,13 +14,13 @@ Content-Type: application/json
 POST http://localhost:8080/api/socks/
 Content-Type: application/json
 
-{ "color": "чёрный", "size": "25", "cotton": 80, "quantity": 50 }
+{ "color": "чёрный", "size": "25", "cotton": 20, "quantity": 50 }
 
 ### Отгрузка носков со склада.
 PUT http://localhost:8080/api/socks/
 Content-Type: application/json
 
-{ "color": "чёрный", "size": "25", "cotton": 80, "quantity": 20 }
+{ "color": "чёрный", "size": "25", "cotton": 20, "quantity": 20 }
 
 ###  "Списание брака носков со склада".
 DELETE http://localhost:8080/api/socks/
