@@ -7,6 +7,6 @@
 - узнать общее количество носков определенного цвета и состава в данный момент времени;
 - дополнительно иметь возможность парсить (читать и преобразовывать данные) файлы с данными по товару.
 <h3>Backend:</h3>
-Java 17, Maven, Spring Boot, Spring Web, REST
+Java 11, Maven, Spring Boot, Spring Web, REST
 <h3>Frontend:</h3>
 Swagger
